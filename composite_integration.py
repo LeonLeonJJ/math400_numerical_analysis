@@ -12,7 +12,6 @@ def comp_trapezoidal_rule(a, b, f, n):
     # j begins at 1
     for j in range(n-1):
         result += (2*h/2)*(f(a+(j+1)*h)) #j+1 because j start at 1
-
     return result
 # 4.4  2.a f(x) = cos^2(x)
 print('4.4 2.a\nComposite Trapezoidal rule:', comp_trapezoidal_rule(-0.5, 0.5, f, 4),'\n')
@@ -34,8 +33,9 @@ print("4.4 4.a\nComposite Simpson's rule:", comp_simpson_rule(-0.5, 0.5, f, 4),'
 def comp_midpoint_rule(a,b,f,n):
     h = (b-a)/n
     result=0
-    for j in range(n-1):
-        result += f((a+h/2) + j*h)
+    for j in range(n):
+        result += h * f(a + (j+1-0.5)*h)
     return result
 
 print("4.4 6.a\nComposite Midpoint rule:", comp_midpoint_rule(-0.5, 0.5, f, 4),'\n')
+
