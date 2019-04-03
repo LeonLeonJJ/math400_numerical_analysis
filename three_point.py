@@ -38,5 +38,5 @@ def f_6a(x):
 def f_6a_derivative(x):
     return math.e**x + x*math.e**x
 x_6a = [-0.3, -0.2, -0.1, 0]
-print('Q 6.a')
+print('4.2 #6.a')
 three_pt_eval(f_6a,x_6a)
